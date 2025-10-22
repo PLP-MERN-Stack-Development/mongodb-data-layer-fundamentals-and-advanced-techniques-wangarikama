@@ -1,7 +1,9 @@
+require('dotenv').config();
+
 // queries.js
 const { MongoClient } = require('mongodb');
 
-const uri = 'mongodb+srv://ckme:Stats5050@cluster0.pezgv6n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const uri = process.env.MONGO_URI;
 const dbName = 'plp_bookstore';
 const collectionName = 'books';
 
